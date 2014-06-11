@@ -1,0 +1,58 @@
+$lname1 = $_POST['lname'];
+$fname = $_POST['fname'];
+$lname = $lname1.' ';
+$i = 0;
+$s = 0;
+$k = 1;
+$m = 1;
+$rest = '';
+$restt = '';
+function writeName($mm) {
+$sum = '';
+switch ($mm) {
+   case 'а': return  "A";  
+   case 'б': return  "B";  
+   case 'в': return "V"; 
+   case 'г': return "G";  
+   case 'д': return "D";  
+   case 'е': return "YE";
+   case 'ё': return "YO";
+   case 'ж': return "J";
+   case 'з': return "Z";  
+   case 'и': return "I";  
+   case 'й': return "I";  
+   case 'к': return "K";  
+   case 'л': return "L";  
+   case 'м': return "M";  
+   case 'н': return "N";  
+   case 'о': return "O";  
+   case 'ө': return "O";  
+   case 'р': return "R";  
+   case 'с': return "S";  
+   case 'т': return "T";  
+   case 'у': return "U";  
+   case 'ү': return "V";  
+   case 'х': return "KH"; 
+   case 'ц': return "TS"; 
+   case 'ч': return "CH"; 
+   case 'ш': return "SH"; 
+   case 'ь': return "I";  
+   case 'э': return "E";  
+   case 'ю': return "YU"; 
+   case 'я': return "YA"; 
+ 
+}
+}
+
+while($i <strlen($lname))
+{
+	$rest.$m = substr($lname , $i , 2);
+	$i = $i+2;
+	echo writeName($rest.$m);	
+}
+while($s <strlen($fname))
+{
+	$rest.$k = substr($fname , $s , 2);
+	$s = $s+2;
+    echo writeName($restt.$k);
+}
